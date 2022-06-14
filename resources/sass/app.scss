@@ -1,0 +1,115 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+
+h1{
+    font-family: Amplesoft_Bold_2;
+    font-size:40px; 
+    text-align: center;
+    color: black;
+}
+
+h2{
+    float: left;
+    position: relative;
+    font-family: Amplesoft_Bold_2;
+    font-size:16px; 
+    text-align: left;
+    color: black;
+}
+
+.labelfun{
+    float: left;
+    position: relative;
+    font-family: Amplesoft_Bold_2;
+    font-size:26px;
+    text-align: center;
+    color: black;
+}
+.labelprod{
+    float: left;
+    position: relative;
+    font-family: Amplesoft_Bold_2;
+    font-size:26px;
+    text-align: left;
+    color: black;
+}
+
+.btnRetrabajo{
+    height:160px; 
+    width: 160px; 
+    background-color:gray; 
+    font-size:90px; 
+    font-family: Amplesoft_Bold_2; 
+    border-radius: 12px;
+    float: right; 
+    color: red;
+}
+
+.btnTrabajo{
+    height:160px; 
+    width: 160px; 
+    background-color:green; 
+    font-size:90px; 
+    font-family: Amplesoft_Bold_2; 
+    border-radius: 12px;
+    float: left;
+}
+.conRetrabajo{
+    font-family: Amplesoft_Bold_2;
+    font-size: 50px; 
+    float: right; 
+    padding-right:25%; 
+    padding-top:5%; 
+    color: red
+}
+
+.conTrabajo{
+    font-family: Amplesoft_Bold_2;
+    font-size:200px;
+    padding-left:25%;
+}
+
+.option {
+    font-family: Amplesoft_Bold_2;
+    font-size:12px; 
+    color: black;
+}
+
+
+select {
+    float:left;
+    padding: 10px;
+
+}
+
+.seccion1 {
+    display: inline-block; 
+    width:30%;
+}
+
+.seccion1 .cf-medium {width:10%;}
+
+//.seccion1 h2 {display: block !important; width: 150% !important;}
+
+
+.seccion2 {
+    display: inline-block; 
+    width:48%;
+}
+
+.seccion2 .cf-medium {width:10%;}
+
+
+
+@font-face {
+    font-family: Amplesoft_Bold_2;
+    font-size: 22px;
+    src: url('/font/AmpleSoft_Bold_2.ttf');
+}
