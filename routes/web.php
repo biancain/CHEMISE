@@ -15,9 +15,9 @@ use App\Http\Controllers\Prueba;
 |
 */
 
-Route::get('/', [ProduccionController::class, 'index'])->name('funcionarios.index');
+Route::get('/hola', [ProduccionController::class, 'index'])->name('funcionarios.index');
 Route::get('search/funcionario', [SearchController::class, 'autocomplete'])->name('search.autocomplete');
-Route::get('/funcionario/update', [ProduccionController::class, 'update'])->name('funcionarios.update');
+Route::get('search/producto', [SearchController::class, 'autocompleteProd'])->name('search.autocompleteProd');
 Route::post('test/', [ProduccionController::class, 'test']);
 Route::get('/prueba', [Prueba::class, 'prueba']);
 Route::post('insert/', [ProduccionController::class, 'insert']);

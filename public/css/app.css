@@ -11306,7 +11306,7 @@ h2, .h2 {
   float: left;
   position: relative;
   font-family: Amplesoft_Bold_2;
-  font-size: 26px;
+  font-size: 16px;
   text-align: center;
   color: black;
 }
@@ -11315,7 +11315,7 @@ h2, .h2 {
   float: left;
   position: relative;
   font-family: Amplesoft_Bold_2;
-  font-size: 26px;
+  font-size: 16px;
   text-align: left;
   color: black;
 }
@@ -11323,12 +11323,12 @@ h2, .h2 {
 .btnRetrabajo {
   height: 160px;
   width: 160px;
-  background-color: gray;
+  background-color: #FF0000;
   font-size: 90px;
   font-family: Amplesoft_Bold_2;
   border-radius: 12px;
   float: right;
-  color: red;
+  color: white;
 }
 
 .btnTrabajo {
@@ -11339,6 +11339,7 @@ h2, .h2 {
   font-family: Amplesoft_Bold_2;
   border-radius: 12px;
   float: left;
+  color: white;
 }
 
 .conRetrabajo {

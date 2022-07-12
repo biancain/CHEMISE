@@ -39,8 +39,8 @@ class Prueba extends Controller
             return $mayor;
         }
 
-        //Otra funcion no se de que pero voy a crear
-        function cargar($hora_actual, $mayor){
+         //Otra funcion no se de que pero voy a crear
+         function cargar($hora_actual, $mayor){
             $ultimoRegistro = DB::select('select id, corte from produccion.produccion p order by id desc limit 1');
             $corte = $ultimoRegistro[0]->{'corte'};
             $id = $ultimoRegistro[0]->{'id'};
@@ -53,7 +53,7 @@ class Prueba extends Controller
 
         function insert($mayor){
             $menor = $mayor;
-            $ultimoRegistro = DB::select('select * from produccion.produccion p order by id desc limit 1');
+            $ultimoRegistro = DB::select('select * from jws.security_user');
             $id = $ultimoRegistro[0]->{'id'};
             DB::update("UPDATE produccion.produccion SET corte=? WHERE id=?", [1, $id]);
             $corte = $ultimoRegistro[0]->{'corte'};
@@ -75,4 +75,3 @@ class Prueba extends Controller
         }
     }
 }
-

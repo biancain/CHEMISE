@@ -10,11 +10,11 @@ class SearchController extends Controller
 {
     public function autocomplete(Request $request){
         $term = $request->get('term');
-        $querys = DB::table('funcionarios')->select('funcionarios.nombre')->where('id', 'LIKE', '%' .$term . '%')->limit(1)->get();
+        $querys = DB::connection('sqlsrv')->select("SELECT TOP 1 Funcionario FROM BI.dbo.vw_staff where idUsuario like '%$term%'");
         $data = [];
 
         foreach ($querys as $query) {
-            $query = (string)($query->nombre);
+            $query = (string)($query->Funcionario);
             $data[] = $query;
         }
         if ( empty($data[0]) == true ){
@@ -22,4 +22,20 @@ class SearchController extends Controller
         }
         return $data;
     }
+
+    public function autocompleteProd(Request $request){
+        $term = $request->get('term');
+        $queryis = DB::connection("storage")->table('produtos')->select("SELECT descricao FROM storage.produtos WHERE Codigo LIKE '%$term%' LIMIT 1");
+        $dat = [];
+
+        foreach ($queryis as $query) {
+            $query = (string)($query->descricao);
+            $dat[] = $query;
+        }
+        if ( empty($dat[0]) == true ){
+            $dat[] = "";
+        }
+        return $dat;
+    }
+
 }

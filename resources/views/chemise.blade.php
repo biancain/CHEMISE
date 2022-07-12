@@ -38,7 +38,7 @@
                         <option class="option" value="comprobante">Comprobante</option>
                         <option class="option" value="otro">Otro</option>
                     </select> --}}
-                    <input id="autocompleteproduc" name="prod_func" type="number" class="form-control" placeholder="Produc" aria-label="Produc" aria-describedby="basic-addon2" style="float:left;padding:10px;height:35px; width:17%;">
+                    <input id="autocompleteproduc" name="prod_func" type="text" class="form-control" placeholder="Produc" aria-label="Produc" aria-describedby="basic-addon2" style="float:left;padding:10px;height:35px; width:17%;">
                     <label id="product_name" class="labelprod" for="Producto" style="text-align:left;padding-right:5%;padding-left:5%;padding-bottom:0%"></label>
                     {{-- <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="A" style="float:center;padding:8px;height:5px; width:5px;"> --}}
                     <div style="float:right">
@@ -113,7 +113,7 @@
         $('#autocompleteproduc').autocomplete({
             source: function(request, response) {
                 $.ajax({
-                    url: "{{route('search.autocomplete')}}",
+                    url: "{{route('search.autocompleteProd')}}",
                     dataType: 'json',
                     data: {
                         term: request.term
@@ -125,10 +125,10 @@
             },
             focus : function(){ return false; }
         }).on( 'autocompleteresponse autocompleteselect', function( e, ui ){
-            console.log("a");
-            nombreApellido = $('#product_name')
+            console.log("b");
+            product = $('#product_name')
             respuesta = ( e.type == 'autocompleteresponse' ? ui.content[0].label :  ui.item.label )
-            nombreApellido.text( respuesta );
+            product.text( respuesta );
 
             return false;
         });
